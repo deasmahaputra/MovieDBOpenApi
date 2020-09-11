@@ -6,7 +6,6 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class ActivityBuilder {
 
-    @ContributesAndroidInjector(modules = [(::class)])
-    internal abstract fun bindGithubUser(): GithubUserActivity
+
 
 }

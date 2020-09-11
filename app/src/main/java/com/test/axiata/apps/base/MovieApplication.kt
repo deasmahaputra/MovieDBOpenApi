@@ -4,6 +4,8 @@ import android.app.Activity
 import android.app.Application
 import android.os.StrictMode
 import androidx.appcompat.app.AppCompatDelegate
+import com.test.axiata.apps.di.component.AppComponent
+import com.test.axiata.apps.di.component.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector

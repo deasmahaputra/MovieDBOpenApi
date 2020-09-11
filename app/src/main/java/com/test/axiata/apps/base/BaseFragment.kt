@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import com.test.axiata.apps.di.component.AppComponent
 import dagger.android.support.AndroidSupportInjection
 
 abstract class BaseFragment<T : ViewDataBinding, V : BaseViewModel<*>> : Fragment() {
@@ -26,7 +27,7 @@ abstract class BaseFragment<T : ViewDataBinding, V : BaseViewModel<*>> : Fragmen
         performDataBinding()
     }
 
-    protected fun getAppComponent(): AppComponent = (activity?.application as TiketApplication).appComponent
+    protected fun getAppComponent(): AppComponent = (activity?.application as MovieApplication).appComponent
 
     override fun onCreateView(
         inflater: LayoutInflater,
