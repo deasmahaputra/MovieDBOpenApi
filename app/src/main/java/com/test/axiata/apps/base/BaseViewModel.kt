@@ -3,10 +3,11 @@ package com.test.axiata.apps.base
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.test.axiata.apps.network.ApiService
 import io.reactivex.disposables.CompositeDisposable
 import java.lang.ref.WeakReference
 
-abstract class BaseViewModel<N>: ViewModel(){
+abstract class BaseViewModel<N>(apiService: ApiService): ViewModel(){
 
     private lateinit var navigator: WeakReference<N>
     var isLoading = ObservableBoolean(false)
