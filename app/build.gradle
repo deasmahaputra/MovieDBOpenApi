@@ -84,6 +84,9 @@ dependencies {
     implementation libraries.viewpager2
     implementation libraries.material
 
+    implementation libraries.navigationUI
+    implementation libraries.navigationFragment
+
     debugImplementation libraries.chuckDebug
     releaseImplementation libraries.chuckRelease
 

@@ -22,7 +22,6 @@ class MovieApplication : Application(), HasActivityInjector {
         return activityDispatchingAndroidInjector
     }
 
-
     override fun onCreate() {
         super.onCreate()
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
