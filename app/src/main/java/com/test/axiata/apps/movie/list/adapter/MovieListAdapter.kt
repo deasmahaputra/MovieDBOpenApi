@@ -27,9 +27,10 @@ class MovieListAdapter(val context: Context) : RecyclerView.Adapter<MovieListAda
     }
 
     fun setDataList(data : List<MovieListResponse.MovieList>){
-        movieList.clear()
+        var size = data.size
         movieList.addAll(data)
-        notifyDataSetChanged()
+        var newSize = movieList.size
+        notifyItemRangeChanged(size, newSize)
     }
 
     class MovieListViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
