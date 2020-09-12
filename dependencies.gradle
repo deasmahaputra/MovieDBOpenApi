@@ -54,6 +54,7 @@ ext {
             chuckRelease       : "com.readystatesoftware.chuck:library-no-op:1.1.0",
             navigationUI         : "androidx.navigation:navigation-ui-ktx:2.3.0",
             navigationFragment   : "androidx.navigation:navigation-fragment-ktx:2.3.0",
+            roundedImage :  "com.makeramen:roundedimageview:2.3.0"
 
 
     ]
