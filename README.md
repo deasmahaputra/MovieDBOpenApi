@@ -8,7 +8,7 @@ This project uses the Gradle build system. To build this project, use the
 
 Project Spesifications
 ----------------------
-* Using MVVM architecture pattern
+* Using MVVM architecture pattern (using live data and android navigation)
 * Have min SDK as 17
 
 
