@@ -7,4 +7,6 @@ interface MovieContract{
     fun stopLoading()
 
     fun onError(message : String)
+
+    fun showServiceUnavailablePage()
 }

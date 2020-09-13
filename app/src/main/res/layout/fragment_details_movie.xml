@@ -235,5 +235,10 @@
 
         </androidx.core.widget.NestedScrollView>
 
+        <include
+            android:id="@+id/failure_layout"
+            android:visibility="gone"
+            layout="@layout/fragment_failure_page"/>
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

@@ -60,6 +60,7 @@ class MovieActivity : BaseActivity<ActivityMovieBinding, MovieViewModel>(), Movi
 
     override fun stopLoading() {}
     override fun onError(message: String) {}
+    override fun showServiceUnavailablePage() {}
 
     fun visibilityToolbar(visible : Boolean){
         binding.toolbar.isVisible = visible

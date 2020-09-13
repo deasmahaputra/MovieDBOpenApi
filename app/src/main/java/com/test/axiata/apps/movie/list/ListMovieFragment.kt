@@ -28,6 +28,7 @@ import dagger.android.DispatchingAndroidInjector
 import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.fragment_failure_page.*
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
@@ -115,6 +116,17 @@ class ListMovieFragment : BaseFragment<FragmentListMovieBinding, MovieViewModel>
         viewModel.errorMessages.observe(viewLifecycleOwner, Observer {
             onError(it)
         })
+
+        viewModel.serviceUnavailable.observe(viewLifecycleOwner, Observer {
+            if(it){
+                showServiceUnavailablePage()
+            }
+        })
+
+        retry_btn.setOnClickListener {
+            viewModel.fetchMovieList(defPage, 28)
+            binding.failureLayout.visibility = View.GONE
+        }
     }
 
     private fun scrollData(): PaginationScrollListener {
@@ -131,7 +143,7 @@ class ListMovieFragment : BaseFragment<FragmentListMovieBinding, MovieViewModel>
                         defPage += 1
                         viewModel.fetchMovieList(defPage, genreId)
                     }, {
-
+                        showSimpleAlertDialog("", "Reopen Apps")
                     })
             }
         }
@@ -149,6 +161,10 @@ class ListMovieFragment : BaseFragment<FragmentListMovieBinding, MovieViewModel>
 
     override fun onError(message: String) {
         showSimpleAlertDialog("", message)
+    }
+
+    override fun showServiceUnavailablePage() {
+        binding.failureLayout.visibility = View.VISIBLE
     }
 
     override fun itemClicked(movieId: Int) {

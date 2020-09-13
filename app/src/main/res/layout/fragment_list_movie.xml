@@ -92,5 +92,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
+
+        <include
+            android:id="@+id/failure_layout"
+            android:visibility="gone"
+            layout="@layout/fragment_failure_page"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
