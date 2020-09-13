@@ -23,7 +23,7 @@ class NetworkError(private val throwable: Throwable) {
         }
         if (throwable is HttpException) {
             getErrorResponse().let { it ->
-                it?.error.let { return it?.takeIfNotEmpty(MESSAGE_ERROR_DEFAULT).toString() }
+                it?.status_message.let { return it?.takeIfNotEmpty(MESSAGE_ERROR_DEFAULT).toString() }
             }
         }
         return MESSAGE_ERROR_DEFAULT

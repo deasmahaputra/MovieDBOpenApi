@@ -16,5 +16,22 @@
             app:argType="string"
             android:defaultValue="@null"/>
 
+        <action
+            android:id="@+id/view_movie_details"
+            app:launchSingleTop="true"
+            app:destination="@id/nav_details_movie" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_details_movie"
+        android:name="com.test.axiata.apps.movie.details.DetailsMovieFragment"
+        android:label="DetailsMovieFragment" >
+
+        <argument
+            android:name="movieId"
+            app:argType="string"
+            android:defaultValue="@null"/>
+
     </fragment>
 </navigation>

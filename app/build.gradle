@@ -86,7 +86,7 @@ dependencies {
 
     implementation libraries.navigationUI
     implementation libraries.navigationFragment
-    implementation libraries.roundedImage
+    implementation libraries.shimmer
 
     debugImplementation libraries.chuckDebug
     releaseImplementation libraries.chuckRelease

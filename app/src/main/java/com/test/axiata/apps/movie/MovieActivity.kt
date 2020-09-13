@@ -1,6 +1,7 @@
 package com.test.axiata.apps.movie
 
 import android.os.Bundle
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.databinding.library.baseAdapters.BR
@@ -48,11 +49,20 @@ class MovieActivity : BaseActivity<ActivityMovieBinding, MovieViewModel>(), Movi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setSupportActionBar(toolbar)
+        binding = getViewDataBinding()
         initViews()
     }
 
     private fun initViews() {
         navController = findNavController(R.id.nav_host_fragment)
+    }
 
+    override fun startLoading() {}
+
+    override fun stopLoading() {}
+
+    fun visibilityToolbar(visible : Boolean){
+        binding.toolbar.isVisible = visible
+        if (visible) binding.toolbar.invalidate()
     }
 }
