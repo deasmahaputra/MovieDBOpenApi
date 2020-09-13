@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
@@ -54,6 +55,14 @@ abstract class BaseFragment<T : ViewDataBinding, V : BaseViewModel<*>> : Fragmen
     interface Callback {
         fun onFragmentAttached()
         fun onFragmentDetached(tag: String)
+    }
+
+    protected fun showSimpleAlertDialog(title: String?, message: String) {
+        val builder = context?.let { AlertDialog.Builder(it) }
+        title.let { builder?.setTitle(it) }
+        builder?.setMessage(message)
+        builder?.setPositiveButton("Ok", null)
+        builder?.show()
     }
 
 }
