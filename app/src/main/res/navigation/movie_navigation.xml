@@ -19,7 +19,9 @@
         <action
             android:id="@+id/view_movie_details"
             app:launchSingleTop="true"
-            app:destination="@id/nav_details_movie" />
+            app:destination="@id/nav_details_movie"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_list_movie"/>
 
     </fragment>
 

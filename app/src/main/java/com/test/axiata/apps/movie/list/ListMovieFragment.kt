@@ -111,6 +111,10 @@ class ListMovieFragment : BaseFragment<FragmentListMovieBinding, MovieViewModel>
                 stopLoading()
             }
         })
+
+        viewModel.errorMessages.observe(viewLifecycleOwner, Observer {
+            onError(it)
+        })
     }
 
     private fun scrollData(): PaginationScrollListener {
@@ -141,6 +145,10 @@ class ListMovieFragment : BaseFragment<FragmentListMovieBinding, MovieViewModel>
     override fun stopLoading() {
         binding.shimmerViewContainer.stopShimmerAnimation()
         binding.shimmerViewContainer.visibility = View.GONE
+    }
+
+    override fun onError(message: String) {
+        showSimpleAlertDialog("", message)
     }
 
     override fun itemClicked(movieId: Int) {

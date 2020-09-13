@@ -4,6 +4,7 @@ import com.test.axiata.apps.BuildConfig
 import com.test.axiata.apps.network.response.DetailsMovieResponse
 import com.test.axiata.apps.network.response.GenreResponse
 import com.test.axiata.apps.network.response.MovieListResponse
+import com.test.axiata.apps.network.response.TrailerResponse
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -23,5 +24,9 @@ interface NetworkService{
     @GET(BuildConfig.ENDPOINT + "3/movie/{movie_id}")
     fun fetchDetailMovie(@Path("movie_id") movieId : Int,
                          @Query("api_key") apiKey : String) : Observable<DetailsMovieResponse>
+
+    @GET(BuildConfig.ENDPOINT + "3/movie/{movie_id}/videos")
+    fun fetchTrailerVideo(@Path("movie_id") movieId : Int,
+                          @Query("api_key") apiKey : String) : Observable<TrailerResponse>
 
 }
