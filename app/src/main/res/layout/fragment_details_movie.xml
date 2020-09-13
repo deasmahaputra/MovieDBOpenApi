@@ -27,7 +27,7 @@
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
-                android:layout_height="600dp"
+                android:layout_height="500dp"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:contentScrim="?attr/colorPrimary"
                 app:expandedTitleTextAppearance="@android:color/transparent"
@@ -40,7 +40,7 @@
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/movies_iv"
                         android:layout_width="match_parent"
-                        android:layout_height="600dp"
+                        android:layout_height="500dp"
                         android:background="@color/white"
                         android:scaleType="centerCrop"
                         app:layout_collapseMode="parallax"
@@ -72,15 +72,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/back_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
                             android:layout_marginTop="8dp"
-                            android:text="\uf060"
+                            android:text="Movie Details"
                             android:fontFamily="@font/robotobold"
                             android:textSize="24sp"
+                            android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -147,6 +149,22 @@
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/vote_tv" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/trailer_btn"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/shape_main_color_enabled"
+                        android:text="Play Trailer"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/robotobold"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

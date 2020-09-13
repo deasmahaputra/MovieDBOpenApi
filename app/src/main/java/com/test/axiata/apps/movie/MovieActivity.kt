@@ -48,7 +48,6 @@ class MovieActivity : BaseActivity<ActivityMovieBinding, MovieViewModel>(), Movi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setSupportActionBar(toolbar)
         binding = getViewDataBinding()
         initViews()
     }
@@ -60,6 +59,7 @@ class MovieActivity : BaseActivity<ActivityMovieBinding, MovieViewModel>(), Movi
     override fun startLoading() {}
 
     override fun stopLoading() {}
+    override fun onError(message: String) {}
 
     fun visibilityToolbar(visible : Boolean){
         binding.toolbar.isVisible = visible

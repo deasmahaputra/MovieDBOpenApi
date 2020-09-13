@@ -5,4 +5,6 @@ interface MovieContract{
     fun startLoading()
 
     fun stopLoading()
+
+    fun onError(message : String)
 }

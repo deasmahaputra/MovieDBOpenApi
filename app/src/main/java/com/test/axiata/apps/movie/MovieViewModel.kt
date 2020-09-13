@@ -14,6 +14,7 @@ class MovieViewModel @Inject constructor(private var apiService : ApiService) : 
     val movieListResponse = SingleLiveEvent<MutableList<MovieListResponse.MovieList>>()
     val movieGenreResponse = SingleLiveEvent<GenreResponse>()
     val shimmerVisibility = SingleLiveEvent<Boolean>()
+    val errorMessages = SingleLiveEvent<String>()
 
     fun fetchMovieList(page : Int, genreId : Int){
         shimmerVisibility.value = true
@@ -25,6 +26,7 @@ class MovieViewModel @Inject constructor(private var apiService : ApiService) : 
 
             override fun onError(error: NetworkError) {
                 shimmerVisibility.value = false
+                errorMessages.value = error.getErrorMessage()
             }
 
         })
@@ -38,7 +40,7 @@ class MovieViewModel @Inject constructor(private var apiService : ApiService) : 
             }
 
             override fun onError(error: NetworkError) {
-
+                errorMessages.value = error.getErrorMessage()
             }
 
         })

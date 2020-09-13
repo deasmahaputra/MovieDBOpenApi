@@ -6,6 +6,7 @@ import com.test.axiata.apps.extension.subscribe
 import com.test.axiata.apps.network.response.DetailsMovieResponse
 import com.test.axiata.apps.network.response.GenreResponse
 import com.test.axiata.apps.network.response.MovieListResponse
+import com.test.axiata.apps.network.response.TrailerResponse
 import io.reactivex.disposables.Disposable
 
 class ApiService(private val networkService: NetworkService){
@@ -24,6 +25,12 @@ class ApiService(private val networkService: NetworkService){
 
     fun fetchMovieDetails(movieId : Int, callback: ApiResponseCallback<DetailsMovieResponse>) : Disposable{
         return networkService.fetchDetailMovie(movieId, BuildConfig.APIKEY)
+            .configured()
+            .subscribe({callback.onSuccess(it)}, { error : NetworkError -> callback.onError(error)})
+    }
+
+    fun fetchTrailerVideo(movieId : Int, callback: ApiResponseCallback<TrailerResponse>) : Disposable{
+        return networkService.fetchTrailerVideo(movieId, BuildConfig.APIKEY)
             .configured()
             .subscribe({callback.onSuccess(it)}, { error : NetworkError -> callback.onError(error)})
     }

@@ -21,12 +21,15 @@ android {
             minifyEnabled false
             buildConfigField 'String', 'ENDPOINT', "${endPoint}"
             buildConfigField 'String', 'APIKEY', "${apiKey}"
+            buildConfigField 'String', 'GOOGLEAPIKEY', "${googleApiKey}"
+
         }
 
         release {
             minifyEnabled false
             buildConfigField 'String', 'ENDPOINT', "${endPoint}"
             buildConfigField 'String', 'APIKEY', "${apiKey}"
+            buildConfigField 'String', 'GOOGLEAPIKEY', "${googleApiKey}"
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
@@ -87,6 +90,7 @@ dependencies {
     implementation libraries.navigationUI
     implementation libraries.navigationFragment
     implementation libraries.shimmer
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
 
     debugImplementation libraries.chuckDebug
     releaseImplementation libraries.chuckRelease
