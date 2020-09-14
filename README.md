@@ -46,7 +46,7 @@ Libraries Used
 
 Android Studio IDE setup
 ------------------------
-For development, the latest version of Android Studio 3.4.2 is required. The latest version can be
+For development, the latest version of Android Studio 4.0.1 is required. The latest version can be
 downloaded from [here](https://developer.android.com/studio/).
 
 Screenshoots 
