@@ -51,11 +51,11 @@ downloaded from [here](https://developer.android.com/studio/).
 
 Screenshoots 
 ------------------------
-![WhatsApp Image 2020-09-14 at 00 07 47 (1)](https://user-images.githubusercontent.com/17407370/93024233-11b95880-f61f-11ea-9df2-1e88506e92c1.jpeg)
-![WhatsApp Image 2020-09-14 at 00 07 47 (2)](https://user-images.githubusercontent.com/17407370/93024362-24805d00-f620-11ea-9c1a-55057b0e4e8d.jpeg)
+![WhatsApp Image 2020-09-14 at 08 48 26](https://user-images.githubusercontent.com/17407370/93036063-f4a97780-f668-11ea-90b0-de0d7528c46c.jpeg)
 ![WhatsApp Image 2020-09-14 at 00 07 47 (3)](https://user-images.githubusercontent.com/17407370/93024365-29dda780-f620-11ea-8637-29b7eb9cc5ca.jpeg)
 ![WhatsApp Image 2020-09-14 at 00 07 47 (4)](https://user-images.githubusercontent.com/17407370/93024370-2d712e80-f620-11ea-9454-cb6f882c659b.jpeg)
+![WhatsApp Image 2020-09-14 at 00 07 47 (2)](https://user-images.githubusercontent.com/17407370/93024362-24805d00-f620-11ea-9c1a-55057b0e4e8d.jpeg)
 ![WhatsApp Image 2020-09-14 at 00 07 47 (5)](https://user-images.githubusercontent.com/17407370/93024372-2f3af200-f620-11ea-8f96-d916f85fb177.jpeg)
-![WhatsApp Image 2020-09-14 at 00 07 47](https://user-images.githubusercontent.com/17407370/93035251-b6ab5400-f666-11ea-9395-d89e01c53c12.jpeg)
+![WhatsApp Image 2020-09-14 at 08 48 17](https://user-images.githubusercontent.com/17407370/93036027-dcd1f380-f668-11ea-8564-8b46e52c778a.jpeg)
 
 
